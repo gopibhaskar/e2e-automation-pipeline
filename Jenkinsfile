@@ -7,7 +7,7 @@ node {
     stage('Git checkout') { // for display purposes
         checkout scm
         sh 'git log --format="%ae" | head -1 > commit-author.txt'
-        //commit_Email= readFile('commit-author.txt').trim()
+        commit_Email= readFile('commit-author.txt').trim()
         branchName= "master"
         echo branchName
         commit_username='${CHANGES, format="%a"}'
