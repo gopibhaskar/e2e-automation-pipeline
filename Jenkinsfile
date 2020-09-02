@@ -10,7 +10,8 @@ node {
     if ( lastSuccessfulCommit == currentCommit ) {
         Stage('No Code Change') {
             echo " No Build required"
-        }else{
+        }
+    }else{
 
         stage('Git checkout') { // for display purposes
             checkout scm
